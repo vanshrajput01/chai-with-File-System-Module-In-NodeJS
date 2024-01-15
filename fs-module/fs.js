@@ -59,7 +59,7 @@ fs.open("input.txt","r+",(err,fd)=>{
 
 // Write File in fs Module
 
-// Write file Asynchronous
+// Write file Asynchronous but this writeFile methrod override the file
 
 fs.writeFile("inputFile.txt","I am Learn FS Module in Node.js",(err)=>{
     if(err){
@@ -73,11 +73,17 @@ fs.writeFile("inputFile.txt","I am Learn FS Module in Node.js",(err)=>{
 
     }
     console.log("Newly created file read success fully!!");
-    console.log(data.toString());
+    // console.log(data.toString());
    })
 })
 
-//
+// write the file synchronous
+
+fs.writeFileSync("input.txt","I am success fully learn fs module in js","ascii");
+
+console.log("file write success fully!!");
+
+
 
 
 
