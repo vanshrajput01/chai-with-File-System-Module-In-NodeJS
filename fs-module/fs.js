@@ -57,6 +57,30 @@ fs.open("input.txt","r+",(err,fd)=>{
     })
 })
 
+// Write File in fs Module
+
+// Write file Asynchronous
+
+fs.writeFile("inputFile.txt","I am Learn FS Module in Node.js",(err)=>{
+    if(err){
+        console.log("Error in Write the file");
+    }
+   console.log("File write Success Fully!!");
+   // Now read new written file
+   fs.readFile("inputFile.txt",(er,data)=>{
+    if(er){
+        console.log("Error in Read the file" ,er);
+
+    }
+    console.log("Newly created file read success fully!!");
+    console.log(data.toString());
+   })
+})
+
+//
+
+
+
 
 
 
