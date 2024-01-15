@@ -77,13 +77,24 @@ const fs = require("fs");
 
 // Append file  this methrod not override file
 
-fs.appendFile("inputFile.txt","\n--by A course",(err)=>{
-    if(err){
-        console.log("Error in Append File");
-    }
-    console.log("File append Success fully!!");
+// fs.appendFile("inputFile.txt","\n--by A course",(err)=>{
+//     if(err){
+//         console.log("Error in Append File");
+//     }
+//     console.log("File append Success fully!!");
 
+// })
+
+
+// Delete file
+
+fs.unlink("newFile.txt",(er)=>{
+    if(er){
+        console.log("Error in File Deleting",er);
+    }
+    console.log("File delete Success fully!!");
 })
+
 
 
 
